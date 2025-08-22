@@ -1,217 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shriyaa Sawant | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shriya Sawant | Portfolio</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #ffe6f0; /* soft pink */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe6f0;
       color: #333;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
 
     header {
+      background: #ffb3c6;
+      padding: 2.5rem 1rem;
       text-align: center;
-      padding: 30px 10px;
-      background: #ffb3cc;
-      color: #fff;
-      border-bottom: 4px solid #ff99bb;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
     }
 
     header p {
-      margin: 5px 0 0;
-      font-size: 1.1rem;
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      color: #fff;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 15px;
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4d6d;
     }
 
     section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 15px;
-      color: #cc3366;
-    }
-
-    .about, .skills, .certifications, .projects {
+      max-width: 800px;
+      margin: 2rem auto;
       background: #fff;
-      padding: 20px;
+      padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      text-align: center;
+      color: #ff4d6d;
+      margin-bottom: 1rem;
     }
 
     .about p {
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
 
-    .skills-list, .cert-list {
+    .project {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .project p {
+      margin: 0.5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 10px;
+      background: #ff4d6d;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e6004c;
+    }
+
+    .skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 1rem;
     }
 
-    .skill-item, .cert-item {
-      background: #ffccd9;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      transition: transform 0.2s;
-    }
-
-    .skill-item:hover, .cert-item:hover {
-      transform: scale(1.05);
-      background: #ffb3cc;
-    }
-
-    .cert-item img {
-      height: 40px;
-      vertical-align: middle;
-      margin-left: 8px;
-    }
-
-    .project-card {
-      text-align: center;
-      padding: 20px;
-      background: #fff5f8;
-      border: 2px solid #ffccd9;
-      border-radius: 10px;
-      margin: 0 auto;
-      max-width: 600px;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      color: #cc3366;
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      background: #cc3366;
+    .skill {
+      background: #ffb3c6;
       color: #fff;
-      padding: 8px 15px;
+      padding: 8px 12px;
       border-radius: 20px;
-      transition: background 0.3s;
+      font-size: 0.9rem;
     }
 
-    .project-card a:hover {
-      background: #a3294f;
+    .cert {
+      text-align: center;
+      margin-top: 1.5rem;
     }
 
-    .github-btn {
+    .cert img {
+      width: 70px;
       display: block;
-      text-align: center;
-      margin: 20px auto 0;
-      text-decoration: none;
-      background: #ff6699;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: background 0.3s;
-      max-width: 200px;
+      margin: 0 auto 10px;
     }
 
-    .github-btn:hover {
-      background: #e05582;
+    .cert a {
+      color: #ff4d6d;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5rem;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-      background: #ffb3cc;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #ffb3c6;
       color: #fff;
-      margin-top: 40px;
     }
 
-    /* Mobile tweaks */
-    @media(max-width:600px){
-      header h1 { font-size: 1.6rem; }
-      .project-card { padding: 15px; }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      section {
+        margin: 1rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Shriya Sawant</h1>
-    <p>Computer Engineering Student | Chai Addict ☕ | Anchor & Coder</p>
+    <p>Computer Engineering Student | Coder & Anchor | Foodie </p>
   </header>
 
-  <div class="container">
-    <!-- About -->
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        Hey! I'm Shriya, a Computer Engineering student who loves coding but also enjoys connecting with people, hosting events, shopping sprees, and movie marathons.  
-        When not sipping chai, you'll find me experimenting with tech ideas or anchoring college fests!
-      </p>
-    </section>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="https://github.com/shriyaaasawant" target="_blank">My GitHub</a>
+  </nav>
 
-    <!-- Skills -->
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div class="skill-item">Java</div>
-        <div class="skill-item">MySQL</div>
-        <div class="skill-item">PHP</div>
-        <div class="skill-item">HTML</div>
-        <div class="skill-item">CSS</div>
-        <div class="skill-item">JavaScript</div>
-      </div>
-    </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+     Hi! I'm Shriya, a passionate Computer Engineering student who loves coding 💻, 
+      connecting with people 🤝, binge-watching web series 🍿, exploring new food spots 🍔, 
+      and of course, shopping 🛍️! Always curious to learn new things.
+    </p>
+  </section>
 
-    <!-- Certifications -->
-    <section class="certifications">
-      <h2>Certifications</h2>
-      <div class="cert-list">
-        <a class="cert-item" href="https://www.credly.com/badges/d9cf257e-4418-43d7-ae14-be2348eb867a/public_url" target="_blank">
-          Microsoft Certified: Azure Fundamentals (AZ-900)
-          <img src="https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="AZ-900 Badge">
-        </a>
-      </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Movie Ticket Booking System</h3>
+      <p>A responsive web application for booking movie tickets online, viewing bookings and browsing movies.</p>
+      <a class="btn" href="https://github.com/shriyaaasawant/Movie-Ticket-Booking" target="_blank">View on GitHub</a>
+    </div>
+  </section>
 
-    <!-- Project -->
-    <section class="projects">
-      <h2>Project Highlight</h2>
-      <div class="project-card">
-        <h3>🎬 Movie Ticket Booking App</h3>
-        <p>
-          A responsive web application developed using Java with MySQL integration via JDBC  
-          for booking tickets, viewing bookings, and browsing available movies.
-        </p>
-        <a href="https://github.com/shriyaaasawant/movie-ticket-booking" target="_blank">View Project on GitHub</a>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">Java</span>
+      <span class="skill">MySQL</span>
+      <span class="skill">PHP</span>
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+    </div>
+  </section>
 
-    <!-- GitHub Button -->
-    <a class="github-btn" href="https://github.com/shriyaaasawant" target="_blank">My GitHub Repositories</a>
-  </div>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert">
+      <img src="https://img.icons8.com/fluency/96/cloud.png" alt="Cloud Icon">
+      <a href="https://www.credly.com/badges/d9cf257e-4418-43d7-ae14-be2348eb867a/public_url" target="_blank">
+        Microsoft Certified: Azure Fundamentals (AZ-900)
+      </a>
+    </div>
+  </section>
 
   <footer>
-    Made with HTML,CSS, ❤️ & too many cups of chai☕ by Shriyaa
+    <p>Made with HTML,CSS,❤️ & too many cups of chai☕ by Shriya </p>
   </footer>
 </body>
 </html>
