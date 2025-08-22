@@ -22,7 +22,7 @@
 
     header h1 {
       margin: 0;
-      font-size: 3rem;
+      font-size: 3rem; /* Bigger Name */
       font-weight: bold;
       color: #fff;
     }
@@ -65,15 +65,19 @@
       margin-bottom: 1rem;
     }
 
-    .about p {
+    /* Project Card */
+    .project-card {
+      background: #ffe6eb;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
       text-align: center;
-      font-size: 1rem;
-      margin-top: 0.5rem;
     }
 
-    .project {
-      text-align: center;
-      margin-top: 1rem;
+    .project-card:hover {
+      transform: translateY(-5px);
     }
 
     .project p {
@@ -117,17 +121,16 @@
     }
 
     .cert img {
-      width: 70px;
+      width: 150px;
       display: block;
       margin: 0 auto 10px;
+      border-radius: 8px;
     }
 
     .cert a {
       color: #ff4d6d;
       text-decoration: none;
       font-weight: bold;
-      display: block;
-      margin-top: 0.5rem;
     }
 
     footer {
@@ -140,7 +143,7 @@
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
       }
 
       section {
@@ -161,27 +164,30 @@
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
-    <a href="https://github.com/shriyaaasawant" target="_blank">My GitHub</a>
+    <a href="https://github.com/shriyaaasawant" target="_blank">My GitHub Repositories</a>
   </nav>
 
-  <section id="about" class="about">
+  <!-- About Me Section -->
+  <section id="about">
     <h2>About Me</h2>
-    <p>
-     Hi! I'm Shriya, a passionate Computer Engineering student who loves coding 💻, 
+    <p style="text-align:center;">
+      Hi! I'm Shriya, a passionate Computer Engineering student who loves coding 💻, 
       connecting with people 🤝, binge-watching web series 🍿, exploring new food spots 🍔, 
-      and of course, shopping 🛍️! Always curious to learn new things.
+      and of course, shopping 🛍️! Always curious to learn new things and turn ideas into reality. 🚀
     </p>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
+    <div class="project-card">
       <h3>Movie Ticket Booking System</h3>
-      <p>A responsive web application for booking movie tickets online, viewing bookings and browsing movies.</p>
+      <p>A responsive web application for booking movie tickets online, viewing bookings, and browsing movies.</p>
       <a class="btn" href="https://github.com/shriyaaasawant/Movie-Ticket-Booking" target="_blank">View on GitHub</a>
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
@@ -194,10 +200,11 @@
     </div>
   </section>
 
+  <!-- Certifications Section -->
   <section id="certifications">
     <h2>Certifications</h2>
     <div class="cert">
-      <img src="https://img.icons8.com/fluency/96/cloud.png" alt="Cloud Icon">
+      <img src="https://images.credly.com/size/340x340/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="AZ-900 Badge">
       <a href="https://www.credly.com/badges/d9cf257e-4418-43d7-ae14-be2348eb867a/public_url" target="_blank">
         Microsoft Certified: Azure Fundamentals (AZ-900)
       </a>
@@ -205,7 +212,7 @@
   </section>
 
   <footer>
-    <p>Made with HTML,CSS,❤️ & too many cups of chai☕ by Shriya </p>
+    <p>Made with HTML, CSS, ❤️ & too many cups of chai ☕ by Shriya </p>
   </footer>
 </body>
 </html>
