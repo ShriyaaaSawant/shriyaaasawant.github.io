@@ -13,11 +13,11 @@
     body {
       font-family: "Segoe UI", sans-serif;
       line-height: 1.6;
-      background: #f5f7fa;
+      background: #ffe6eb; /* soft pink background */
       color: #333;
     }
     header {
-      background: #2c3e50;
+      background: #e75480; /* darker pink for header */
       color: #fff;
       padding: 60px 20px;
       text-align: center;
@@ -28,10 +28,10 @@
     }
     header p {
       font-size: 1.2rem;
-      color: #bdc3c7;
+      color: #fce4ec;
     }
     nav {
-      background: #34495e;
+      background: #ff7aa2;
       display: flex;
       justify-content: center;
       padding: 10px 0;
@@ -39,14 +39,14 @@
       top: 0;
     }
     nav a {
-      color: #ecf0f1;
+      color: #fff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #1abc9c;
+      color: #333;
     }
     section {
       padding: 60px 20px;
@@ -56,24 +56,66 @@
     }
     section h2 {
       margin-bottom: 20px;
-      color: #2c3e50;
+      color: #e75480;
     }
-    .projects a {
+
+    /* Project Card Styling */
+    .project-card {
+      background: #fff0f5;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 420px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    .project-card h3 {
+      margin-bottom: 12px;
+      color: #e75480;
+      font-size: 1.5rem;
+    }
+    .project-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .project-card a {
       display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background: #1abc9c;
+      padding: 10px 20px;
+      background: #e75480;
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
       transition: background 0.3s;
     }
-    .projects a:hover {
-      background: #16a085;
+    .project-card a:hover {
+      background: #d64570;
     }
+
+    /* GitHub Button */
+    .github-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ff7aa2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .github-btn:hover {
+      background: #e75480;
+    }
+
     footer {
       text-align: center;
-      background: #ecf0f1;
+      background: #f8d7da;
       padding: 20px;
       margin-top: 40px;
       font-size: 0.9rem;
@@ -91,7 +133,7 @@
 </head>
 <body>
   <header>
-    <h1>Shriya Sawant</h1>
+    <h1>Shriyaa Sawant</h1>
     <p>Computer Engineering Student | Aspiring Developer</p>
   </header>
 
@@ -101,29 +143,33 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About Me -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-     <p>
-    Hi! I'm Shriyaa, a Computer Engineering student who enjoys coding but also loves connecting with people,
-    hosting events, and exploring new experiences. Beyond tech, you'll often find me shopping, watching movies, cooking 
-    or anchoring college shows. For me, coding is not just a skill — it's a way to bring ideas to life while balancing
-    creativity, fun, and social vibes.
+      Hi! I'm Shriyaa, a Computer Engineering student who enjoys coding but also loves connecting with people,
+      hosting events, and exploring new experiences. Beyond tech, you'll often find me shopping, watching movies,
+      or anchoring shows. For me, coding is not just a skill — it's a way to bring ideas to life while balancing
+      creativity, fun, and social vibes.
     </p>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <a href="https://github.com/shriyaaasawant" target="_blank">My GitHub Repositories</a>
-      <!-- Add individual project links here later -->
+    <h2>Featured Project</h2>
+    <div class="project-card">
+      <h3>🎬 Movie Ticket Booking App</h3>
+      <p>A responsive web application for booking movie tickets online with seat selection and simple payment flow.</p>
+      <a href="https://github.com/shriyaaasawant/movie-ticket-booking" target="_blank">View Project on GitHub</a>
     </div>
+    <a class="github-btn" href="https://github.com/shriyaaasawant" target="_blank">My GitHub Repositories</a>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:shriyaaasawant@example.com">shriyaaasawant@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/shriyaaasawant" target="_blank">linkedin.com/in/shriyaaasawant</a></p>
+    <p>Email: <a href="mailto:shriyasawant.nbnstic.comp@gmail.com">shriyasawant.nbnstic.comp@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shriya-sawant-a04757299/" target="_blank">linkedin.com/in/shriyasawant</a></p>
   </section>
 
   <footer>
